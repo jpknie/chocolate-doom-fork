@@ -1,0 +1,7 @@
+/home/janiniem/Experiments/chocolate-doom/rust-port/target/debug/deps/librust_port-97ff9a661dc95d2e.a: src/lib.rs src/bindings.rs src/d_event.rs
+
+/home/janiniem/Experiments/chocolate-doom/rust-port/target/debug/deps/rust_port-97ff9a661dc95d2e.d: src/lib.rs src/bindings.rs src/d_event.rs
+
+src/lib.rs:
+src/bindings.rs:
+src/d_event.rs:

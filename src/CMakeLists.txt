@@ -61,7 +61,7 @@ set_target_properties("${PROGRAM_PREFIX}server" PROPERTIES LINK_FLAGS "${SDL_FLA
 
 set(GAME_SOURCE_FILES
     aes_prng.c          aes_prng.h
-    d_event.c           d_event.h
+    d_event.h
                         doomkeys.h
                         doomtype.h
     d_iwad.c            d_iwad.h
@@ -169,6 +169,9 @@ endif()
 
 target_include_directories("${PROGRAM_PREFIX}doom" PRIVATE ${GAME_INCLUDE_DIRS})
 target_link_libraries("${PROGRAM_PREFIX}doom" doom ${EXTRA_LIBS})
+target_link_libraries("${PROGRAM_PREFIX}doom"
+	"${CMAKE_SOURCE_DIR}/rust-port/target/debug/librust_port.a")
+
 set_target_properties("${PROGRAM_PREFIX}doom" PROPERTIES COMPILE_FLAGS "${SDL_FLAGS}")
 
 if(MSVC)
